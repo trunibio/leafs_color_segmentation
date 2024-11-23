@@ -2,6 +2,8 @@
 This repository contains code for the identification of healthy and rooted regions of the horse chestnut leaf images. The implemented algorithm assigns one of the rotten, healthy, and background classes to each of the image pixels independently. A sample algorithm result is shown in the picture below.
 ![sample_leaf_segmentation](images_for_readme/leaf_sample_image.PNG)
 
+Author of the code: [Martin Chudjak](https://github.com/chudjakmartin)
+
 # Algorithm description
 Each image is represented by the grid (matrix) of pixels. Each pixel is a RGB-triplet of numbers from the interval <0, 255>. Any color, represented by it’s RGB-triplet is a point in 3D Euclidean space. Therefore Euclidean distances between any two colors (each represented by it’s RGB-triplet) can be calculated and understood as a distance between these colors. 
 We developed an algorithm for automatic segmentation of green and brown parts of a leaf. The algorithm is parametrized by the RGB base colors. Each of the base colors has it’s RGB-triplet and class. Base color classes are three: green leaf part, brown leaf part or background.
@@ -35,6 +37,7 @@ If you want to use the provided code for your own purposes, create conda envirom
 - pillow=10.3.0
 - pymupdf==1.24.5
 - scipy=1.13.1
+
 After installing the libraries, set constants in the leaf_constants.py file and you are ready to use. If you are new to python, you may follow the following instructions:
 - Install Anaconda (see e.g. this [video](https://www.youtube.com/watch?v=UTqOXwAi1pE)).
 - Download this repository. If you know how to use git, simply use git clone command. Otherwise, download this repository as zip file to your local directory and extract it.
